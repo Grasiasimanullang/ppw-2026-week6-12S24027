@@ -1,4 +1,14 @@
-﻿[2026-10-09 09:18:56] local.INFO: [SQL AUDIT] (0.69 ms) select * from "sessions" where "id" = ? limit 1  
-[2026-10-09 09:18:56] local.INFO: [SQL AUDIT] (0.19 ms) select count(*) as aggregate from "kategoris"  
-[2026-10-09 09:18:56] local.INFO: [SQL AUDIT] (0.30 ms) select "kategoris".*, (select count(*) from "bukus" where "kategoris"."id" = "bukus"."kategori_id") as "bukus_count" from "kategoris" order by "created_at" desc limit 10 offset 0  
-[2026-10-09 09:18:56] local.INFO: [SQL AUDIT] (2.81 ms) update "sessions" set "payload" = ?, "last_activity" = ?, "user_id" = ?, "ip_address" = ?, "user_agent" = ? where "id" = ?  
+﻿[2026-10-09 09:28:02] local.INFO: [SQL AUDIT] (0.58 ms) select * from "sessions" where "id" = ? limit 1  
+[2026-10-09 09:28:02] local.INFO: [SQL AUDIT] (0.16 ms) select count(*) as aggregate from "bukus"  
+[2026-10-09 09:28:02] local.INFO: [SQL AUDIT] (0.23 ms) select * from "bukus" order by "created_at" desc limit 10 offset 0  
+[2026-10-09 09:28:02] local.INFO: [SQL AUDIT] (0.14 ms) select * from "kategoris" where "kategoris"."id" = ? limit 1  
+[2026-10-09 09:28:02] local.INFO: [SQL AUDIT] (0.10 ms) select * from "kategoris" where "kategoris"."id" = ? limit 1  
+[2026-10-09 09:28:02] local.INFO: [SQL AUDIT] (0.08 ms) select * from "kategoris" where "kategoris"."id" = ? limit 1  
+[2026-10-09 09:28:02] local.INFO: [SQL AUDIT] (0.08 ms) select * from "kategoris" where "kategoris"."id" = ? limit 1  
+[2026-10-09 09:28:02] local.INFO: [SQL AUDIT] (0.08 ms) select * from "kategoris" where "kategoris"."id" = ? limit 1  
+[2026-10-09 09:28:02] local.INFO: [SQL AUDIT] (0.08 ms) select * from "kategoris" where "kategoris"."id" = ? limit 1  
+[2026-10-09 09:28:02] local.INFO: [SQL AUDIT] (0.08 ms) select * from "kategoris" where "kategoris"."id" = ? limit 1  
+[2026-10-09 09:28:02] local.INFO: [SQL AUDIT] (0.08 ms) select * from "kategoris" where "kategoris"."id" = ? limit 1  
+[2026-10-09 09:28:02] local.INFO: [SQL AUDIT] (0.07 ms) select * from "kategoris" where "kategoris"."id" = ? limit 1  
+[2026-10-09 09:28:02] local.INFO: [SQL AUDIT] (0.07 ms) select * from "kategoris" where "kategoris"."id" = ? limit 1  
+[2026-10-09 09:28:02] local.INFO: [SQL AUDIT] (8.91 ms) update "sessions" set "payload" = ?, "last_activity" = ?, "user_id" = ?, "ip_address" = ?, "user_agent" = ? where "id" = ?  
