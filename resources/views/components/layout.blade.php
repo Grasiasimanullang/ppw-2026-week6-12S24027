@@ -15,10 +15,21 @@
     <nav class="navbar navbar-expand-lg navbar-dark navbar-del shadow-sm mb-4">
         <div class="container">
             <a class="navbar-brand fw-bold" href="{{ route('buku.index') }}">SIPUS-Del Perpustakaan</a>
-            <div class="navbar-nav flex-row gap-3">
+            <div class="navbar-nav flex-row gap-3 align-items-center">
                 <a class="nav-link" href="{{ route('buku.index') }}">Buku</a>
                 <a class="nav-link" href="{{ route('kategori.index') }}">Kategori</a>
                 <a class="nav-link" href="{{ route('peminjaman.index') }}">Peminjaman</a>
+                @auth
+                    <span class="navbar-text small text-white-50">
+                        {{ auth()->user()->name }} · {{ session('login_timestamp') }}
+                    </span>
+                    <form action="{{ route('logout') }}" method="POST" class="d-inline">
+                        @csrf
+                        <button class="btn btn-sm btn-outline-light">Logout</button>
+                    </form>
+                @else
+                    <a class="nav-link" href="{{ route('login') }}">Login</a>
+                @endauth
             </div>
         </div>
     </nav>
@@ -30,8 +41,9 @@
                 <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
             </div>
         @endif
+
         @if(session('error'))
-           <div class="alert alert-danger alert-dismissible fade show">
+            <div class="alert alert-danger alert-dismissible fade show">
                 {{ session('error') }}
                 <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
             </div>
