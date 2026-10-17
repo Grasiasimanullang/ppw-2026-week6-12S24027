@@ -17,5 +17,7 @@ class DatabaseSeeder extends Seeder
         KategoriSeeder::class,
         BukuSeeder::class,
     ]);
+    $this->call(PustakawanSeeder::class);
+    $this->call(PeminjamanSeeder::class);
 }
 }
